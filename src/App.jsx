@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
+import ColorGenerator from './components/colorGenerator';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         Colors
-      </header>
+      </header> */}
+      <ColorGenerator />
     </div>
   );
 }
