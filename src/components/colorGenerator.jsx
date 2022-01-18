@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import createPixels from '../functions/pixelCreator';
 
 export default function ColorGenerator() {
-  const [grid, setGrid] = useState(0);
+  const [grid, setGrid] = useState < Array > (0);
   useEffect(() => {
     const tempGrid = createPixels();
     setGrid(tempGrid);
