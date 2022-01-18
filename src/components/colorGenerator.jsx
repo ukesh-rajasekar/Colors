@@ -1,9 +1,3 @@
-/* eslint-disable array-callback-return */
-/* eslint-disable no-console */
-/* eslint-disable indent */
-/* eslint-disable arrow-body-style */
-/* eslint-disable keyword-spacing */
-/* eslint-disable react/no-array-index-key */
 import React, { useState, useEffect } from 'react';
 import createPixels from '../functions/pixelCreator';
 
@@ -12,15 +6,15 @@ export default function ColorGenerator() {
   useEffect(() => {
     const tempGrid = createPixels();
     setGrid(tempGrid);
-    console.log(tempGrid);
   }, []);
 
-  if(!grid.length) return <>Loading...</>;
+  if (!grid.length) return <>Loading...</>;
   return (
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(256, 5px)' }}>
       {grid.map((rows, i) => rows.map((cols, j) => (
         <div
           className="cells"
+          // eslint-disable-next-line react/no-array-index-key
           key={`${i}-${j}`}
           style={{
                         width: '5px',
